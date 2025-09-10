@@ -1,0 +1,58 @@
+SERVER -SIDE VALIDATION 
+SOURCE CODE:
+<html>
+<body>
+<form action="student_validation.php" method="POST">
+<label>Name:</label>
+ <input type="text" name="name" required><br><br>
+ <label>Email:</label>
+ <input type="text" name="email" required><br><br>
+ <label>Age:</label>
+ <input type="text" name="age" required><br><br>
+ <label>Course:</label>
+ <input type="text" name="course" required><br><br>
+ <input type="submit" value="Submit”>
+</form>
+</body>
+</html>
+<?php
+// Initialize error array
+$errors = [];
+// Validate Name
+$name = trim($_POST['name'] ?? '');
+$errors = [];
+if (empty($name)) $errors[] = "Name is required.";
+elseif (!preg_match("/^[a-zA-Z ]+$/", $name)) $errors[] = "Name must contain only letters 
+and spaces.";
+foreach ($errors as $e) echo "<p style='color:red;'>$e</p>";
+// Validate Email
+if (empty($_POST['email'])) {
+ $errors[] = "Email is required.";
+} elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+ $errors[] = "Invalid email format.";
+}
+// Validate Age
+if (empty($_POST['age'])) {
+ $errors[] = "Age is required.";
+} elseif (!is_numeric($_POST['age'])) {
+ $errors[] = "Age must be a number.";
+}
+// Validate Course
+if (empty($_POST['course'])) {
+ $errors[] = "Course is required.";
+}
+// Display errors or success
+if (!empty($errors)) {
+ echo "<h3>Validation Errors:</h3><ul>";
+ foreach ($errors as $error) {
+ echo "<li>$error</li>";
+ }
+ echo "</ul>";
+ } else {
+ echo "<h3>Student Details Submitted Successfully!</h3>";
+ echo "<p><strong>Name:</strong> " . htmlspecialchars($_POST['name']) . "</p>";
+ echo "<p><strong>Email:</strong> " . htmlspecialchars($_POST['email']) . "</p>";
+ echo "<p><strong>Age:</strong> " . htmlspecialchars($_POST['age']) . "</p>";
+ echo "<p><strong>Course:</strong> " . htmlspecialchars($_POST['course']) . "</p>";
+}
+?>
