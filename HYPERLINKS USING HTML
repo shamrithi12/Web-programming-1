@@ -1,0 +1,47 @@
+HYPERLINKS USING HTML
+SOURCE CODE:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tech Trends 2025</title>
+</head>
+<body>
+<h1><center>LATEST TECHNOLOGY AND TRENDS IN 2025 </center></h1>
+<h3>TOP 3 TECHNOLOGY TRENDS</h3>
+<ol>
+<li>Agentic AI</li>
+<li>Edge AI & Edge Computing</li>
+<li>5G-Advanced & 6G Networks</li>
+</ol>
+<h3>KEY FEATURES</h3>
+<ul>
+<li>Autonomous decision making</li>
+<li>Goal-directed task execution</li>
+<li>Collaboration with humans & AI</li>
+<li>24/7 Operation</li>
+</ul>
+<h3>TECHNOLOGY TRENDS TABLE</h3>
+<table border="1" width="80%">
+<tr>
+<th>Technology</th>
+<th>Use Cases</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>Agentic AI</td>
+<td>Virtual assistants, autonomous bots</td>
+<td><a href="file:///C:/Users/roshi/Desktop/agenetic%20ai.html">Agentic AI</a></td>
+</tr>
+<tr>
+<td>Edge AI</td>
+<td>Smart sensors, vehicles</td>
+<td><a href="file:///C:/Users/roshi/Desktop/edge%20ai.html">Edge AI</a></td>
+</tr>
+<tr>
+<td>5G-Advanced</td>
+<td>High-speed IoT</td>
+<td><a href="file:///C:/Users/roshi/Desktop/5g-advanced.html">5G Advanced</a></td>
+</tr>
+</table>
+</body>
+</html>
