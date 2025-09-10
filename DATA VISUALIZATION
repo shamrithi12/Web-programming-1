@@ -1,0 +1,22 @@
+DATA VISUALIZATION
+SOURCE CODE:
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+<div id="myPlot" ></div>
+<script>
+const xArray = ["TAMIL", "ENGLISH", "MATHS", "SCINCE", "SOCIAL SCIENCE"];
+const yArray = [55, 49, 44, 24, 15];
+const data = [{
+ x:xArray,
+ y:yArray,
+ type:"bar",
+ orientation:"v",
+ marker: {color:"rgba(0,0,255,0.6)"}
+}];
+const layout = {title:"STUDENT MARK DETAILS"};
+Plotly.newPlot("myPlot", data, layout);
+</script>
+</body>
+</html>
