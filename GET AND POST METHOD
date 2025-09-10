@@ -1,0 +1,44 @@
+GET AND POST METHOD 
+SOURCE CODE:
+Get,html
+<html>
+<body>
+<form action="process.php"
+method="GET">
+Name (GET): <input type="text"
+name="name_get"><br><br>
+<input type="submit" value="Submit
+with GET">
+</form>
+</body>
+</html>
+Post.html
+<html>
+<body>
+<form action="process.php" method="POST">
+Name (POST): <input type="text"
+name="name_post"><br><br>
+<input type="submit" value="Submit with POST">
+</form>
+</body>
+</html>
+Process.html
+<?php
+// Handle GET request
+if (isset($_GET['name_get'])) {
+$name_get =
+htmlspecialchars($_GET['name_get']);
+echo "Data received via GET";
+echo "You can see this data in the
+URL.<br>";
+}
+// Handle POST request
+if (isset($_POST['name_post'])) {
+$name_post =
+htmlspecialchars($_POST['name_post']);
+echo "Data received via POST:";
+echo "Welcome, " . $name_post . "!<br>";
+echo "This data is not visible in the
+URL.<br>";
+}
+?>
