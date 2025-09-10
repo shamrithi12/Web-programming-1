@@ -1,0 +1,54 @@
+STUDENT MARK DETAILS
+SOURCE CODE:
+Student Marks.html
+<html>
+<head>
+<title>STUDENT MARK DETAILS</title>
+</head>
+<body>
+<center>
+<form action="http://localhost/Marksdata.php" method="post">
+<table border="5" width="600" height="50" color="black">
+<th> <h2> STUDENT MARK DETAILS </h2> </th>
+<tr> <td> <br>
+FIRST NAME: <input type="text" name="name" placeholder="Enter your name" 
+required/><br><br>
+SSLC PERCENTAGE: <input type="text" name="sp" placeholder="Enter your sslc 
+percentage" required/><br><br>
+HSC PERCENTAGE: <input type="text" name="hp" placeholder="Enter your hsc 
+percentage" required/><br><br>
+UG PERCENTAGE: <input type="text" name="up" placeholder="Enter your ug percentage" 
+required/><br><br>
+</td> </tr> <br>
+</table> <br>
+<input type="submit" name="Submit your data" value="Submit your data"/>
+</form>
+</center>
+</body>
+</html>
+
+
+
+
+Marksdata.php
+<?PHP
+$name = $_POST['name'];
+$sp= $_POST['sp'];
+$hp = $_POST['hp'];
+$up = $_POST['up'];
+$dbhandle = mysqli_connect('localhost','root','','Marksdb') or die ("unable to connect to 
+mysql!!!");
+$sql="INSERT into Marks(name,sp,hp,up) VALUES ('$name','$sp','$hp','$up')";
+$query = mysqli_query($dbhandle,$sql);
+$res = "select * from Marks";
+$result= mysqli_query($dbhandle,$res);
+while ($rs = mysqli_fetch_array($result))
+{
+echo"<b>First name :".$rs[0]."<br>";
+echo"<b>SSLC Percentage:".$rs[1]."<br>";
+echo"<b>HSC Percentage:".$rs[2]."<br>";
+echo"<b>UG Percentage:".$rs[3]."<br>";
+}
+$query = mysqli_query($dbhandle,$sql);
+mysqli_close($dbhandle);
+?>
