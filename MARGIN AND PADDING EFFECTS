@@ -1,0 +1,57 @@
+MARGIN AND PADDING EFFECTS
+SOURCE CODE:
+<html>
+<head>
+<title>Margin and Padding Example</title> <style>
+.box {
+background-color: #f0f0f0;
+border: 2px solid black;
+width: 300px;
+height: 100px;
+margin-bottom: 20px;
+}
+.margin-top {
+margin-top: 50px;
+}
+.margin-bottom {
+margin-bottom: 50px;
+}
+.margin-left {
+margin-left: 50px;
+}
+.margin-right {
+margin-right: 80px;
+}
+.padding-top {
+padding-top: 60px;
+}
+.padding-bottom {
+padding-bottom: 40px;
+}
+.padding-left {
+padding-left: 50px;
+}
+.padding-right {
+padding-right: 30px;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<th>MARGIN</th>
+<th>PADDING</th>
+</tr>
+<tr>
+<td> <div class="box margin-top">Margin Top</div></td>
+<td> <div class="box padding-top">Padding Top</div></td>
+</tr>
+<td> <div class="box margin-bottom">Margin Bottom</div></td> <td> <div class="box 
+padding-bottom">Padding Bottom</div></td> </tr>
+<td><div class="box margin-left">Margin Left</div></td>
+<td><div class="box padding-left">Padding Left</div></td>
+</tr>
+<td><div class="box margin-right">Margin Right</div></td>
+<td><div class="box padding-right">Padding Right</div></td> </tr>
+</body>
+</html>
