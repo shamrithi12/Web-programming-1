@@ -1,0 +1,49 @@
+CLIENT -SIDE VALIDATION 
+SOURCE CODE:
+<html>
+<head>
+<style>
+.error { color: red; font-size: 14px; }
+</style>
+</head>
+<body>
+<h2>Student Form</h2>
+<form id="studentForm" onsubmit="return validateForm()">
+Name: <input type="text" id="name"><br><br>
+Roll No: <input type="text" id="rollno"><br><br>
+Email ID: <input type="email" id="emailid"><br><br>
+<button type="submit">Submit</button>
+</form>
+<script>
+function validateForm() {
+document.querySelectorAll(".error").forEach(e => e.remove());
+let isValid = true;
+const name = document.getElementById("name");
+const rollno = document.getElementById("rollno");
+const emailid = document.getElementById("emailid");
+if (name.value.trim() === "") {
+showError(name, "Name is required");
+isValid = false;
+} else if (!/^[a-zA-Z ]+$/.test(name.value.trim())) {
+showError(name, "Name must contain only letters and spaces");
+isValid = false;
+}
+if (rollno.value.trim() === "") {
+showError(rollno, "Roll No is required");
+isValid = false;
+}
+if (emailid.value.trim() === "") {
+showError(emailid, "Email is required");
+isValid = false;
+}
+return isValid;
+}
+function showError(input, msg) {
+const error = document.createElement("div");
+error.className = "error";
+error.innerText = msg;
+input.insertAdjacentElement("afterend", error);
+}
+</script>
+</body>
+</html>  
