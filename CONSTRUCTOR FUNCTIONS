@@ -1,0 +1,17 @@
+CONSTRUCTOR FUNCTIONS
+SOURCE CODE:
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+function Student(name,percentage) {
+this.StudentName = name;
+this.StudentPercentage = percentage;
+}
+const StudentData = new Student("Uma","90%");
+document.getElementById("demo").innerHTML =
+StudentData.StudentName + "," +StudentData.StudentPercentage
+</script>
+</body>
+</html>
