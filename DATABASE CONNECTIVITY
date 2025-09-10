@@ -1,0 +1,49 @@
+DATABASE CONNECTIVITY - PHARMACY
+SOURCE CODE:
+Pharmacy.html
+<html>
+<head>
+<title>MEDICINE DETAILS</title>
+</head>
+<body>
+<center>
+<form action="http://localhost/medicinefront.php" method="post">
+<table border="5" width="600" height="50" color="black">
+<th> <h2> MEDICINE DETAILS </h2> </th>
+<tr> <td> <br>
+PRODUCT ID: <input type="text" name="id"/><br><br> PRODUCT
+NAME: <input type="text" name="name"/><br><br> PRODUCT
+PRICE: <input type="text" name="price"/><br><br>
+</td> </tr> <br>
+</table> <br>
+<input type="submit" name="submit" value="Submit"/>
+<input type="Reset" name="Reset" value="Cancel"/>
+</form>
+</center>
+</body>
+</html>
+
+
+medicinefront.php
+<?PHP
+$id = $_POST['id'];
+$name = $_POST['name'];
+$price = $_POST['price'];
+$dbhandle = mysqli_connect('localhost','root','','medicinedata') or die ("unable toconnect to 
+mysql!!!");
+//$dbsel = mysqli_select_db("medicinedata",$dbhandle) or die ("unable to connectto 
+database!!!");
+$sql="INSERT into product (id,name,price) VALUES ('$id','$name','$price')";
+$query = mysqli_query($dbhandle,$sql);
+$res = "select * from product";
+$result= mysqli_query($dbhandle,$res);
+while ($rs = mysqli_fetch_array($result))
+{
+echo"<b>ID :".$rs[0]."<br>";
+echo"<b>Name :".$rs[1]."<br>";
+echo"<b>Price:".$rs[2]."<br>";
+echo"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br><br>";
+}
+$query = mysqli_query($dbhandle,$sql);
+mysqli_close($dbhandle);
+?>
