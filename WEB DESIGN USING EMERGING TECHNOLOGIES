@@ -1,0 +1,58 @@
+# Web-programming-1
+WEB DESIGN USING EMERGING TECHNOLOGIES 
+SOURCE CODE:
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title> EMERGING TECHNOLOGIES IN CS </title> 
+</head> 
+<center><h1>EMERGING TECHNOLOGIES IN CS </h1></center><hr> <body> 
+<h2 style="color: green">About Technology</h2> 
+<p><i>In 2025, emerging technologies are reshaping industries and daily life at 
+an unprecedented pace. Innovations such as artificial intelligence (AI), quantum computing, 
+extended reality (XR), biotechnology, and next-generation connectivity like 6G are 
+transitioning from experimental phases to real-world applications.As their integration deepens 
+across sectors, understanding and harnessing these technologies becomes crucial for 
+businesses, governments, and individuals aiming to thrive in a rapidly evolving digital 
+era.</i></p> 
+<ul> 
+<li>Artificial Intelligence - AI continues to lead innovation in automation, decisionmaking, 
+personalization, and data analysis across sectors</li><br>
+<li>Quantum Computing - QT are progressing toward solving complex problems beyond the 
+capabilities of classical computers.</li><br> 
+<li>Extended Reality - Virtual reality , augmented reality, and mixed reality are enhancing 
+education, training, and entertainment experiences.</li><br> 
+</ul> 
+<h2 style="color: orange">Across industries from finance to manufacturing, companies now 
+leverage AI and ML applications to:</h2>
+<ol>
+<li>Streamline processes</li> 
+<li>Derive actionable insights</li> 
+<li>Enhance customer experiences</li> 
+<li>Inform business strategy</li> 
+<li>As adoption accelerates, fluency in AI/ML </li> 
+</ol><hr> 
+<marquee direction="right">
+<video width="320" height="240" controls autoplay muted> 
+<source src="Z:\mscda54\sample\ai video.mp4" type="video/mp4"> <source 
+src="Z:\mscda54\sample\ai video.mp4" type="video/ogg"> Your browser does not support 
+the video tag.
+</video> 
+</marquee>
+<marquee direction="left"> 
+<audio controls> 
+<source src= "Z:\mscda54\sample\ai video.mp4" type="audio/ogg"> <source 
+src="Z:\mscda54\sample\ai video.mp4" type="audio/mpeg"> Your browser does not support 
+the audio element. 
+</audio> 
+</marquee> 
+<center> 
+<img 
+src="C:\Users\1MSCDA54\Documents\pgm1\wai.jpg"height=200, width=250></center> 
+<hr> 
+<marquee> 
+<p style="color: #a1566c;" >Code never lies, comments sometimes do.<br> <br>
+<b>- Ron Jeffries</b> 
+</p></marquee> 
+</body> 
+</html>
